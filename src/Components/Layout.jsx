@@ -1,16 +1,17 @@
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import { CustomLink } from "./CustomLink";
 
 const Layout = () => {
     return (
         <>
         <header>
-            <Link to="/">Home</Link>
-            <Link to="/people">People</Link>
-            <Link to="/planets">Planets</Link>
-            <Link to="/species">Species</Link>
-            <Link to="/starships">Starships</Link>
-            <Link to="/vehicles">Vehicles</Link>
-            <Link to="/films">Films</Link>
+            <CustomLink to="/">Home</CustomLink>
+            <CustomLink to="/people">People</CustomLink>
+            <CustomLink to="/planets">Planets</CustomLink>
+            <CustomLink to="/species">Species</CustomLink>
+            <CustomLink to="/starships">Starships</CustomLink>
+            <CustomLink to="/vehicles">Vehicles</CustomLink>
+            <CustomLink to="/films">Films</CustomLink>
         </header>
 
 

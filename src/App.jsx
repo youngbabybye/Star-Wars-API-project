@@ -9,6 +9,8 @@ import { Starships } from "./Pages/Starships";
 import { Vehicles } from "./Pages/Vehicles";
 import { Films } from "./Pages/Films";
 import { Species } from "./Pages/Species";
+import { NotFoundPage } from "./Pages/NotFoundPage";
+import { DynamicPage } from "./Pages/DynamicPage";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="vehicles" element={<Vehicles />} />
           <Route path="films" element={<Films />} />
           <Route path="species" element={<Species />} />
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="people/:id" element={<DynamicPage />} />
         </Route>
       </Routes>
     </>
