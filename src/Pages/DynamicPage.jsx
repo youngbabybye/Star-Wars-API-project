@@ -7,7 +7,6 @@ const DynamicPage = () => {
     const [veh, setVeh] = useState([]);
 
     useEffect(() => {
-        console.log('123')
         fetch(`https://swapi.dev/api/people/${id}`)
         .then((res) => res.json())
         .then((data) => 
