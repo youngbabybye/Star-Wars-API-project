@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {Pagination, Stack, Container} from "@mui/material"
+
 const Base_URL = "https://swapi.dev/api/people/?page=";
 
 const People = () => {
@@ -38,7 +39,7 @@ const People = () => {
                 <Stack spacing={2}>
                     {
                         !!pageQty && (
-                            <Pagination count={((pageQty / 10) + 1) - ((pageQty % 10) * 0.1) } page={page} onChange={(_, num) => setPage(num)}/>
+                            <Pagination count={(pageQty % 10 === 0) ? pageQty / 10 : Math.ceil((pageQty / 10)) } page={page} onChange={(_, num) => setPage(num)}/>
                         )
                     }
                 </Stack>

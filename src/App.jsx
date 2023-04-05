@@ -10,7 +10,14 @@ import { Vehicles } from "./Pages/Vehicles";
 import { Films } from "./Pages/Films";
 import { Species } from "./Pages/Species";
 import { NotFoundPage } from "./Pages/NotFoundPage";
-import { DynamicPage } from "./Pages/DynamicPage";
+import { PeopleDynamic } from "./Pages/PeopleDynamic";
+import { PlanetsDynamic } from "./Pages/PlanetsDynamic";
+import { StarshipsDynamic } from "./Pages/StarshipsDynamic";
+import { FilmsDynamic } from "./Pages/FilmsDynamic";
+import { VehiclesDynamic } from "./Pages/VehiclesDynamic";
+import { SpeciesDynamic } from "./Pages/SpeciesDynamic";
+
+
 
 function App() {
   return (
@@ -25,7 +32,12 @@ function App() {
           <Route path="films" element={<Films />} />
           <Route path="species" element={<Species />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="people/:id" element={<DynamicPage />} />
+          <Route path="people/:id" element={<PeopleDynamic />} />
+          <Route path="planets/:id" element={<PlanetsDynamic />} />
+          <Route path="starships/:id" element={<StarshipsDynamic />} />
+          <Route path="vehicles/:id" element={<VehiclesDynamic />} />
+          <Route path="films/:id" element={<FilmsDynamic />} />
+          <Route path="species/:id" element={<SpeciesDynamic />} />
         </Route>
       </Routes>
     </>
