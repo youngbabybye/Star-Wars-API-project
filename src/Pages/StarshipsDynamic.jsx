@@ -19,20 +19,20 @@ const StarshipsDynamic = () => {
     
     return (
         <div>
-            <p>Starships Page - {id}</p>
             {
                 info && (
                     <>
-                        <p>{info.model}</p>
-                        <p>{info.lenght}</p>
-                        <p>{info.max_atmosphering_speed}</p>
-                        <p>{info.passengers}</p>
-                        <p>{info.cost_in_credits}</p>
+                        <p>Model: {info.model}</p>
+                        <p>Model length, m: {info.length}</p>
+                        <p>Max speed, kmph: {info.max_atmosphering_speed}</p>
+                        <p>Number of passengers: {info.passengers}</p>
+                        <p>Cost in credits: {info.cost_in_credits}</p>
+                        <p>Pilots:</p>
                         {pilots.length > 0 && pilots.map((plt) => (
                             <p key={plt.url}> {plt.name} </p>
                         ))}
-                        {pilots.length === 0 && 
-                        <p> unknown </p>}
+                        {pilots.length === 0 &&
+                            <p>Unknown </p>}
                     </>
                 )
             }

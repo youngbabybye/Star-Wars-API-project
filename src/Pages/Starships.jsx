@@ -24,7 +24,7 @@ const Starships = () => {
     }, [page]);
     return (
         <div>
-            <h1>starships</h1>
+            <h1>Starships</h1>
             {
                 starships && starships.map(starship =>(
                     <Link key={starship.name} to={`/starships/${starship.url.slice(32)}`}>

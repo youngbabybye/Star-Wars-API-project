@@ -23,20 +23,20 @@ const SpeciesDynamic = () => {
     
     return (
         <div>
-            <p>Species Page - {id}</p>
             {
                 info && (
                     <>
-                        <p>{info.classification}</p>
-                        <p>{info.designation}</p>
+                        <p>Classification: {info.classification}</p>
+                        <p>Designation: {info.designation}</p>
                         {homeWorld.map((hww) => (
-                            <p key={hww.url}> {hww.name} </p>
+                            <p key={hww.url}>Homeworld: {hww.name} </p>
                         ))}
-                        <p>{info.language}</p>
-                        <p>{info.average_height}</p>
-                        <p>{info.average_lifespan}</p>
+                        <p>Language: {info.language}</p>
+                        <p>Average height, cm: {info.average_height}</p>
+                        <p>Average lifespan, years: {info.average_lifespan}</p>
+                        <p>People:</p>
                         {peopleSpecies.map((unit) => (
-                            <p key={unit.url}> {unit.name} </p>
+                           <p key={unit.url}>{unit.name} </p>
                         ))}
                     </>
                 )

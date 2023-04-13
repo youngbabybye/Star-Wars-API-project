@@ -15,15 +15,14 @@ const FilmsDynamic = () => {
     
     return (
         <div>
-            <p>Films Page - {id}</p>
             {
                 info && (
                     <>
-                        <p>{info.title}</p>
-                        <p>{info.opening_crawl}</p>
-                        <p>{info.director}</p>
-                        <p>{info.producer}</p>
-                        <p>{info.release_date}</p>
+                        <p>Title: {info.title}</p>
+                        <p>Opening crawl: {info.opening_crawl}</p>
+                        <p>Director: {info.director}</p>
+                        <p>Producer: {info.producer}</p>
+                        <p>Release date: {info.release_date}</p>
                     </>
                 )
             }

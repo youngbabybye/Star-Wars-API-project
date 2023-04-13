@@ -1,0 +1,147 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+.main__div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 24px;
+    min-height: 452px;
+}
+.card_box {
+    width: 210px;
+    max-height: 232px;
+
+    background: #ffffff24;
+    border-radius: 8px;
+    padding-bottom: 16px;
+}
+.card_box:hover {
+    background: #ffffff50;
+}
+.card__header {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 98px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 16px;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    
+}
+.card_info__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;  
+}
+
+.info_box {
+    width: 170px;
+    height: 32px;
+    
+    align-items: center;
+    
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 8px;
+    padding-left: 8px;
+    
+}
+.card__header__text {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(233, 166, 41);
+}
+.card__header__text:hover {
+    color: gold;
+    font-weight: 900;
+}
+.info_box p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00bfff;
+    
+}
+.card_box_individual {
+    
+    width: 550px;
+    min-height: 400px;
+    margin:0 auto;
+    background: #ffffff36;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card_header_individual {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 68px;
+    padding-left: 26px;
+    padding-top: 16px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 16px;
+}
+.card_header_individual__text {
+    font-size: 32px;
+    font-weight: 900;
+    color: gold;
+}
+.card_info_individual {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 400px;
+    min-height: 32px;
+    align-items: center;
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 8px;
+    padding-left: 8px;
+    flex-wrap: wrap;
+}
+.card_info_individual__text {
+    font-size: 18px;
+    color: #00bfff;;
+    font-weight: 200;
+    margin-left: 1px;
+}
+.card_info_individual__title {
+    font-size: 22px;
+    color: gold;
+    font-weight: 200;
+}
+.btn {
+    position: sticky;
+    top: 500px;
+    width: 550px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.pag_item:hover { 
+    font-weight: 900;
+}
