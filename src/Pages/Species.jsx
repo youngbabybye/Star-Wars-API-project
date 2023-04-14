@@ -1,6 +1,23 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Pagination, Stack, Container } from "@mui/material";
+import { Pagination, Stack, PaginationItem } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#FFD700",
+
+            contrastText: "#000",
+        },
+        text: {
+            primary: "#FFD700",
+        },
+    },
+    typography: {
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: 16,
+    },
+});
 
 const Base_URL = "https://swapi.dev/api/species?page=";
 
@@ -23,30 +40,71 @@ const Species = () => {
             });
     }, [page]);
     return (
-        <div>
-            <h1>Species</h1>
-            {species &&
-                species.map((spc) => (
-                    <Link key={spc.url} to={`/species/${spc.url.slice(30)}`}>
-                        <li>{spc.name}</li>
-                    </Link>
-                ))}
-            <Container>
-                <Stack spacing={2}>
-                    {!!pageQty && (
-                        <Pagination
-                            count={
-                                pageQty % 10 === 0
-                                    ? pageQty / 10
-                                    : Math.ceil(pageQty / 10)
-                            }
-                            page={page}
-                            onChange={(_, num) => setPage(num)}
-                        />
-                    )}
+        <>
+            <div className="container">
+                <div className="main__div">
+                    {species &&
+                        species.map((spc) => (
+                            <ul className="card_box">
+                                <Link
+                                    key={spc.name}
+                                    to={`/species/${spc.url.slice(30)}`}
+                                >
+                                    <li className="card__header">
+                                        <p className="card__header__text">
+                                            {spc.name}
+                                        </p>
+                                    </li>
+                                    <div className="card_info">
+                                        <div className="card_info__div">
+                                            <li className="info_box">
+                                                <p>People:</p>
+                                                <p>{spc.people.length}</p>
+                                            </li>
+                                            <li className="info_box">
+                                                <p>Designation:</p>
+                                                <p>
+                                                    {spc.language[0].toUpperCase() +
+                                                        spc.designation.slice(
+                                                            1
+                                                        )}
+                                                </p>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </ul>
+                        ))}
+                </div>
+                <Stack className="pagination_container" spacing={2}>
+                    <ThemeProvider theme={theme}>
+                        {!!pageQty && (
+                            <Pagination
+                                count={
+                                    pageQty % 10 === 0
+                                        ? pageQty / 10
+                                        : Math.ceil(pageQty / 10)
+                                }
+                                page={page}
+                                onChange={(_, num) => setPage(num)}
+                                color="primary"
+                                variant="outlined"
+                                size="large"
+                                renderItem={(item) => (
+                                    <PaginationItem
+                                        className="pag_item"
+                                        component={Link}
+                                        to={`/species/?page=${item.page}`}
+                                        {...item}
+                                    />
+                                )}
+                            />
+                        )}
+                    </ThemeProvider>
                 </Stack>
-            </Container>
-        </div>
+            </div>
+            =
+        </>
     );
 };
 

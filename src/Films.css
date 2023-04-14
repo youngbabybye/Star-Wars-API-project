@@ -1,0 +1,117 @@
+.films_container {
+    display: flex;
+    flex-direction: row;
+    
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+.films_box {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    background: #ffffff36;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.films_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 78px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 16px;
+}
+.films_header__text {
+    font-size: 40px;
+    font-weight: 900;
+    background: linear-gradient(135deg, rgb(134, 242, 3) 33%, rgb(22, 229, 252) 66%, gold);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.films_info {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 400px;
+    min-height: 32px;
+    align-items: center;
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 8px;
+    padding-left: 8px;
+    flex-wrap: wrap;
+}
+.films_info_text {
+    font-size: 18px;
+    color: #d5d5eb;;
+    font-weight: 200;
+    margin-left: 1px;
+}
+.films_info_title {
+    font-size: 22px;
+    color: gold;
+    font-weight: 200;
+}
+.films_image6 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/ReturdOfTheJedi.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.films_image5 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/TheEmpStrike.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.films_image4 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/AnewHope.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.films_image3 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/RevOfTheSith.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.films_image2 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/AttOfTheClones.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.films_image1 {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-image: url("/src/image/ThePhMenace.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

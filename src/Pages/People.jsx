@@ -22,11 +22,14 @@ const theme = createTheme({
 
 const Base_URL = "https://swapi.dev/api/people/?page=";
 
-const People = () => {
-    const [params, setParams] = useSearchParams();
+const People = (props) => {
+    console.log(props);
+
+    const [params] = useSearchParams();
     const [people, setPeople] = useState([]);
-    const [page, setPage] = useState(params.get("page") || 1);
+    const [page, setPage] = useState(parseInt(params.get("page") ?? 1));
     const [pageQty, setPageQty] = useState(0);
+
     useEffect(() => {
         fetch(Base_URL + `${page}`)
             .then((res) => res.json())
