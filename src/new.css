@@ -147,3 +147,19 @@
 .pag_item:hover { 
     font-weight: 900;
 }
+.error404 {
+    font-size: 50px;
+    font-weight: 900;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 450% auto;
+    animation: textShine 3s ease-in infinite alternate
+    
+}
+@keyframes textShine {
+    to {
+      background-position: 100%;
+    }
+  }
