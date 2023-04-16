@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Pagination, Stack, Container } from "@mui/material";
+import { Pagination, Stack, PaginationItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -42,26 +42,38 @@ const Planets = () => {
     }, [page]);
     return (
         <>
-            <div className="planets_container">
-                <ul className="planets_main_content__ul">
+            <div className="container">
+                <div className="main__div">
                     {planets &&
                         planets.map((planet) => (
-                            <Link
-                                className="planets_main_content__link"
-                                key={planet.name}
-                                to={`/planets/${planet.url.slice(30)}`}
-                            >
-                                <li className="planets_main_content__list">
-                                    <h3 className="planets_main_content__text">
-                                        {planet.name}
-                                    </h3>
-                                </li>
-                            </Link>
+                            <ul key={planet.name} className="card_box">
+                                <Link
+                                    key={planet.name}
+                                    to={`/planets/${planet.url.slice(30)}`}
+                                >
+                                    <li className="card__header">
+                                        <p className="card__header__text">
+                                            {planet.name}
+                                        </p>
+                                    </li>
+                                    <div className="card_info">
+                                        <div className="card_info__div">
+                                            <li className="info_box">
+                                                <p>Rotation period:</p>
+                                                <p>{planet.rotation_period}</p>
+                                            </li>
+                                            <li className="info_box">
+                                                <p>Orbital period:</p>
+                                                <p>{planet.orbital_period}</p>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </ul>
                         ))}
-                </ul>
-            </div>
-            <Container className="planets_container">
-                <Stack className="planets_pagination_container" spacing={2}>
+                </div>
+
+                <Stack className="pagination_container" spacing={2}>
                     <ThemeProvider theme={theme}>
                         {!!pageQty && (
                             <Pagination
@@ -75,11 +87,19 @@ const Planets = () => {
                                 color="primary"
                                 variant="outlined"
                                 size="large"
+                                renderItem={(item) => (
+                                    <PaginationItem
+                                        className="pag_item"
+                                        component={Link}
+                                        to={`/planets/?page=${item.page}`}
+                                        {...item}
+                                    />
+                                )}
                             />
                         )}
                     </ThemeProvider>
                 </Stack>
-            </Container>
+            </div>
         </>
     );
 };

@@ -8,6 +8,7 @@ const CustomLink = ({ children, to, ...props }) => {
 
     return (
         <Link
+            reloadDocument
             to={to}
             style={{
                 color: match ? "#00bfff" : "red",
