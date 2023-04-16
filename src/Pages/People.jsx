@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { Pagination, Stack, PaginationItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -22,19 +22,17 @@ const theme = createTheme({
 
 const Base_URL = "https://swapi.dev/api/people/?page=";
 
-const People = (props) => {
-    console.log(props);
-
+const People = () => {
+    const { pathname } = useLocation();
+    console.log(pathname);
     const [params] = useSearchParams();
     const [people, setPeople] = useState([]);
     const [page, setPage] = useState(parseInt(params.get("page") ?? 1));
     const [pageQty, setPageQty] = useState(0);
-
     useEffect(() => {
         fetch(Base_URL + `${page}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setPeople(data.results);
                 setPageQty(data.count);
             })
@@ -43,14 +41,13 @@ const People = (props) => {
                 alert("Ошибка при получении данных");
             });
     }, [page]);
-
     return (
         <>
             <div className="container">
                 <div className="main__div">
                     {people &&
                         people.map((person) => (
-                            <ul className="card_box">
+                            <ul key={person.name} className="card_box">
                                 <Link
                                     key={person.name}
                                     to={`/people/${person.url.slice(29)}`}

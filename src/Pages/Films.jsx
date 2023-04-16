@@ -86,7 +86,7 @@ const Films = () => {
                                     <PaginationItem
                                         className="pag_item"
                                         component={Link}
-                                        to={`/people/?page=${item.page}`}
+                                        to={`/films/?page=${item.page}`}
                                         {...item}
                                     />
                                 )}
