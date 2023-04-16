@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import "./new.css";
 @import "./Films.css";
+@import "./Homepage.css";
 body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
@@ -9,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("/src/BackgroundImage.jpg");
+  scroll-behavior: smooth;
 }
 
 code {
@@ -45,6 +47,7 @@ code {
 }
 .section {
   padding-top: 70px;
+  scroll-behavior: smooth;
 }
 .planets_main_content__ul {
   display: flex;

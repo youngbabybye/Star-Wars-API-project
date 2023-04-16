@@ -41,6 +41,7 @@ const People = () => {
                 alert("Ошибка при получении данных");
             });
     }, [page]);
+
     return (
         <>
             <div className="container">
