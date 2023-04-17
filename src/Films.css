@@ -66,7 +66,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/ReturdOfTheJedi.jpg");
+    background-image: url("/src/image/Films/ReturdOfTheJedi.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -75,7 +75,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/TheEmpStrike.jpg");
+    background-image: url("/src/image/Films/TheEmpStrike.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -84,7 +84,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/AnewHope.jpeg");
+    background-image: url("/src/image/Films/AnewHope.jpeg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -93,7 +93,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/RevOfTheSith.jpg");
+    background-image: url("/src/image/Films/RevOfTheSith.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -102,7 +102,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/AttOfTheClones.jpg");
+    background-image: url("/src/image/Films/AttOfTheClones.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -111,7 +111,7 @@
     min-height: 400px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("/src/image/ThePhMenace.jpg");
+    background-image: url("/src/image/Films/ThePhMenace.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

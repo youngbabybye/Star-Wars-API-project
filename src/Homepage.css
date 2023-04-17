@@ -129,28 +129,28 @@ span {
     height: 600px;
     margin: 0 auto;
     border-radius: 4px;
-    background-image: url("./image/PeopleImg.jpg");
+    background-image: url("./image/Homepage/PeopleImg.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
     
 }
 .planets {
-    background-image: url("./image/PlanetsImg.jpg");
+    background-image: url("./image/Homepage/PlanetsImg.jpg");
 }
 .species {
-    background-image: url("./image/SpeciesImg.jpg");
+    background-image: url("./image/Homepage/SpeciesImg.jpg");
 }
 .starships {
-    background-image: url("./image/StarshipsImg.jpg");
+    background-image: url("./image/Homepage/StarshipsImg.jpg");
 }
 .vehicles {
-    background-image: url("./image/VehiclesImg.jpg");
+    background-image: url("./image/Homepage/VehiclesImg.jpg");
     
 }
 
 .films {
-    background-image: url("./image/FilmsImg.jpg");
+    background-image: url("./image/Homepage/FilmsImg.jpg");
 }
 
 /* FOOTER */
