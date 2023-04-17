@@ -79,6 +79,18 @@ button:hover {
   justify-content: flex-end;
   padding: 5px;
 }
+
+/* PAGINATION */
+
+
+
 .pag_item:hover { 
   font-weight: 900;
+}
+.pagination_container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
