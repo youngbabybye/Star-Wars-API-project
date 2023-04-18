@@ -155,10 +155,7 @@ span {
 }
 */
 /* FOOTER */
-.footer {
-   
-    margin-top: 100px;
-}
+
 
 
 /* new css */
@@ -169,21 +166,19 @@ span {
 	--gallery-gap: calc(var(--index) * 7.5)
 }
 
-.content, .gallery > * {
-	will-change: transform;
-}
+
 
 .main-header {
 	height: 100vh;
 }
-.container {
+.containerss {
 	padding: 0 7vw;
 }
 .main-title {
 	font-size: calc(var(--index) * 1.5);
 	position: absolute;
 	width: 85vh;
-	top: 10vh;
+	top: 20vh;
     left: 66vh;
 	line-height: 1.1;
     
