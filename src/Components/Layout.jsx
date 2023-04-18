@@ -34,7 +34,6 @@ const Layout = () => {
             <main className="section">
                 <Outlet />
             </main>
-            <footer>2023</footer>
         </>
     );
 };

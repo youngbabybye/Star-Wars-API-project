@@ -1,4 +1,4 @@
-.container_homepage {
+/*.container_homepage {
     scroll-behavior: smooth;
     width: 1460px;
     
@@ -7,7 +7,7 @@
 /* HEADER */
 
 
-.header {   
+/*.header {   
     margin-left: auto;
     margin-right: auto;
     max-width: 980px;
@@ -60,7 +60,7 @@ span {
 /* CONTENT BOX */
 
 
-
+/*
 .section_container {
     width: 1280px;
     margin-left: auto;
@@ -123,7 +123,7 @@ span {
 
 /*IMAGE CONTENT BOX*/
 
-
+/*
 .section_img {
     width: 55%;
     height: 600px;
@@ -135,6 +135,7 @@ span {
     
     
 }
+
 .planets {
     background-image: url("./image/Homepage/PlanetsImg.jpg");
 }
@@ -152,9 +153,119 @@ span {
 .films {
     background-image: url("./image/Homepage/FilmsImg.jpg");
 }
-
+*/
 /* FOOTER */
 .footer {
    
     margin-top: 100px;
+}
+
+
+/* new css */
+
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+
+.content, .gallery > * {
+	will-change: transform;
+}
+
+.main-header {
+	height: 100vh;
+}
+.container {
+	padding: 0 7vw;
+}
+.main-title {
+	font-size: calc(var(--index) * 1.5);
+	position: absolute;
+	width: 85vh;
+	top: 10vh;
+    left: 66vh;
+	line-height: 1.1;
+    
+}
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 8) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+    
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+}
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+.text-block__h {
+	font-size: 3rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+.text-block__p {
+    font-size: 1.2rem;
+	line-height: 1.75;
+    color: var(--color-header);
+    margin-bottom: 6rem;
+}
+.text-block__link {
+    font-size: 1.3rem;
+    color:aqua;
+    display: inline-block;
+    
+}
+.text-block__link:hover {
+    font-weight: 900;
+}
+.text-block__link:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: block;
+    height: 2px;
+    width: 17%;
+    background-color: aqua;
+}
+span,strong {
+    color: blueviolet;
+}
+.swapi {
+    color: aqua;
+}
+.swapi:hover {
+    font-weight: 900;
+}
+.swapi:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 74%;
+    display: block;
+    height: 2px;
+    width: 35%;
+    background-color: aqua;
+}
+.last {
+    margin-bottom: 0;
 }

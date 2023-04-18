@@ -9,10 +9,11 @@ body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
   ;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
   background-image: url("/src/image/BackgroundImage.jpg");
-  scroll-behavior: smooth;
+  
+  color: #fafafa;
+  overflow-x: hidden;
 }
 
 code {
