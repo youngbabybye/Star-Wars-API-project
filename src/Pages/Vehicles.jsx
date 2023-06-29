@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Pagination, Stack, PaginationItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
 
@@ -23,20 +23,19 @@ const theme = createTheme({
 const Base_URL = "https://swapi.dev/api/vehicles?page=";
 
 const Vehicles = () => {
+    const [params] = useSearchParams();
     const [vehicles, setVehicles] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(parseInt(params.get("page") ?? 1));
     const [pageQty, setPageQty] = useState(0);
 
     useEffect(() => {
         fetch(Base_URL + `${page}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setVehicles(data.results);
                 setPageQty(data.count);
             })
-            .catch((err) => {
-                console.warn(err);
+            .catch(() => {
                 alert("Ошибка при получении данных");
             });
     }, [page]);

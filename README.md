@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Цели
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Star wars project APP основан на открытом API https://swapi.dev/api/ и был частью тестового задания одной компании.
 
-## Available Scripts
+## Суть тестового задания
 
-In the project directory, you can run:
+Есть ресурс, предоставляющий API для получения различных данных по вселенной фильмов Star Wars - https://swapi.dev/ Документация к нему: https://swapi.dev/documentation
 
-### `npm start`
+Запросы возвращают данные из шести разделов: персонажи, планеты, фильмы и т.п. Например, запрос https://swapi.dev/api/people/1/ возвращает данные о персонаже под номером 1:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+{
+"name": "Luke Skywalker",
+"height": "172",
+"mass": "77",
+"hair_color": "blond",
+"skin_color": "fair",
+"eye_color": "blue",
+"birth_year": "19BBY",
+"gender": "male",
+"homeworld": "https://swapi.dev/api/planets/1/"
+.....
+}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Необходимо реализовать приложение, которое будет отображать все эти данные.
 
-### `npm test`
+Например, на главной странице - кнопки перехода к этим шести разделам, а дальше постраничное отображение соответствующих элементов раздела и при выборе там какого-то конкретного элемента - отображение информации о нем.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Дизайн, шрифты, цвета и т.п. на ваше усмотрение. Главное в задаче реализация получения данных через http запросы и их отображение. Реализовывать можно как с помощью React, так и на чистом JS, по желанию, но если знакомы с React или есть желание попробовать, думаю, удобнее будет скорее с ним, чем без него.
 
-### `npm run build`
+## О проекте
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Это мой ПЕРВЫЙ проект на React. На нём я учился использовать возможности фреймворка и стороннего API. В проекте были использованы: HTML, CSS, JavaScript, Material UI, React.

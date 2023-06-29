@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams, useLocation } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Pagination, Stack, PaginationItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -23,8 +23,6 @@ const theme = createTheme({
 const Base_URL = "https://swapi.dev/api/people/?page=";
 
 const People = () => {
-    const { pathname } = useLocation();
-    console.log(pathname);
     const [params] = useSearchParams();
     const [people, setPeople] = useState([]);
     const [page, setPage] = useState(parseInt(params.get("page") ?? 1));
@@ -36,8 +34,7 @@ const People = () => {
                 setPeople(data.results);
                 setPageQty(data.count);
             })
-            .catch((err) => {
-                console.warn(err);
+            .catch(() => {
                 alert("Ошибка при получении данных");
             });
     }, [page]);

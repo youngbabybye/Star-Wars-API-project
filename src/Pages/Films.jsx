@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Pagination, Stack, PaginationItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -22,20 +23,19 @@ const theme = createTheme({
 const Base_URL = "https://swapi.dev/api/films?page=";
 
 const Films = () => {
+    const [params] = useSearchParams();
     const [films, setFilms] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(parseInt(params.get("page") ?? 1));
     const [pageQty, setPageQty] = useState(0);
 
     useEffect(() => {
         fetch(Base_URL + `${page}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setFilms(data.results);
                 setPageQty(data.count);
             })
-            .catch((err) => {
-                console.warn(err);
+            .catch(() => {
                 alert("Ошибка при получении данных");
             });
     }, [page]);
