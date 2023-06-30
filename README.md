@@ -30,3 +30,5 @@ Star wars project APP основан на открытом API https://swapi.dev
 ## О проекте
 
 Это мой ПЕРВЫЙ проект на React. На нём я учился использовать возможности фреймворка и стороннего API. В проекте были использованы: HTML, CSS, JavaScript, Material UI, React.
+
+Ссылка на проект: https://star-wars-api-navy.vercel.app/
