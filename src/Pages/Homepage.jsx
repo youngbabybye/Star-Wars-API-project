@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import upArrow from "../image/Homepage/upArrow.png";
 import films from "../image/Homepage/FilmsImg.jpg";
 import planets from "../image/Homepage/PlanetsImg.jpg";
 import people from "../image/Homepage/PeopleImg.jpg";
@@ -8,6 +9,24 @@ import starships from "../image/Homepage/StarshipsImg.jpg";
 import vehicles from "../image/Homepage/VehiclesImg.jpg";
 
 const Homepage = () => {
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (
+            document.body.scrollTop > 400 ||
+            document.documentElement.scrollTop > 400
+        ) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.documentElement.scrollTop = 0;
+    }
     return (
         <>
             <div className="wrapper">
@@ -162,6 +181,13 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
+                <button
+                    onClick={() => topFunction()}
+                    id="myBtn"
+                    title="Go to top"
+                >
+                    <img src={upArrow} alt="scroll to top" />
+                </button>
             </div>
         </>
     );
